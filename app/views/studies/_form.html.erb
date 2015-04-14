@@ -1,0 +1,26 @@
+<%= form_for(@study) do |f| %>
+  <% if @study.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@study.errors.count, "error") %> prohibited this study from being saved:</h2>
+
+      <ul>
+      <% @study.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.label :title, 'Title' %>
+  <%= f.text_field :title %>
+  <%= f.label :description, 'Description' %>
+  <%= f.text_area :description %>
+  <%= f.label :start_date, 'Start Date' %>
+  <%= f.text_field :start_date %>
+  <%= f.label :end_date, 'End Date' %>
+  <%= f.text_field :end_date %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
