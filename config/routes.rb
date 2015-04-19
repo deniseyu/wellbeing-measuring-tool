@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :studies do
-    resources :surveys
+    resources :records
     resources :participants
   end
 
