@@ -6,7 +6,10 @@ class RecordsController < ApplicationController
   end
 
   def new
-    return redirect_to new_study_participants_path if @study.participants.empty?
+    if @study.participants.empty?
+      flash[:notice] = 'You must add some participants first!'
+      redirect_to new_study_participant_path
+    end
     @record = Record.new
   end
 

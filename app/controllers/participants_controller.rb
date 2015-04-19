@@ -18,6 +18,7 @@ class ParticipantsController < ApplicationController
       ParticipantMailer.intro_email(@participant, @study).deliver
       redirect_to study_path(@study)
     else
+      flash[:notice] = 'Sorry, something went wrong. Please make sure email and phone number are valid.'
       redirect_to new_study_participant_path
     end
   end
