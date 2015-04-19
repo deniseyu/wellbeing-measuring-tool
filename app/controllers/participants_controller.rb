@@ -13,7 +13,7 @@ class ParticipantsController < ApplicationController
     @participant = @study.participants.new(participant_params)
 
     if @study.save
-      ParticipantMailer.intro_email(@participant).deliver
+      ParticipantMailer.intro_email(@participant, @study).deliver
       redirect_to study_path(@study)
     else
       redirect_to new_study_participant_path
