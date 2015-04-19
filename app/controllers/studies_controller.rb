@@ -20,7 +20,7 @@ class StudiesController < ApplicationController
   end
 
   def create
-    @study = Study.new(study_params)
+    @study = current_user.studies.new(study_params)
 
     respond_to do |format|
       if @study.save
