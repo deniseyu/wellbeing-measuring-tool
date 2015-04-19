@@ -1,4 +1,6 @@
 class ParticipantsController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     @study = Study.find(params[:study_id])
   end

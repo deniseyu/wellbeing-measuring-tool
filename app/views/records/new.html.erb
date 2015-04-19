@@ -1,0 +1,21 @@
+<h1>Creating New Data Collection Event</h1>
+
+<p>For now, the questions sent to participants are standardized.</p>
+<p>In the future, you will be able to specify which questions you want to send to participants.</p>
+
+<ol>
+  <li>Please rate your sense of pleasure on a scale of 1-10.</li>
+  <li>Please rate your sense of purpose on a scale of 1-10.</li>
+  <li>What are you doing right now?</li>
+  <li>Who are you with?</li>
+</ol>
+
+<p>You may include some additional notes to participants in the following field.</p>
+
+<%= form_for [@study, @record] do |f| %>
+  <%= f.label :notes, 'Notes' %>
+  <%= f.text_area :notes %>
+  <div class='actions'>
+    <%= f.submit 'Send' %>
+  </div>
+<% end %>
