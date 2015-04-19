@@ -42,6 +42,7 @@ gem 'devise'
 gem 'bootstrap-sass'
 
 group :test, :development do
+  gem 'letter_opener'
   gem 'warden'
   gem 'database_cleaner'
   gem 'factory_girl_rails'
