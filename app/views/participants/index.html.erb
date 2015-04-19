@@ -1,0 +1,11 @@
+<h1>Participants in <%= @study.title %></h1>
+
+<% if @study.participants.empty? %>
+  <h2>There are no participants yet! <%= link_to "Add Participants", new_study_participant_path(@study) %></h2>
+<% else %>
+  <ol>
+    <% @study.participants.each do |participant| %>
+    <li><%= participant.first_name %> <%= participant.last_name %>, <%= participant.email %></li>
+    <% end %>
+  </ol>
+<% end %>

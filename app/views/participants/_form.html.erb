@@ -1,0 +1,17 @@
+<%= form_for [@study, @participant] do |f| %>
+
+  <%= f.label :first_name, 'First Name' %>
+  <%= f.text_field :first_name %>
+  <%= f.label :last_name, 'Last Name' %>
+  <%= f.text_field :last_name %>
+  <%= f.label :email, 'Email Address' %>
+  <%= f.text_field :email %>
+  <%= f.label :phone, 'Phone Number' %>
+  <%= f.text_field :phone %>
+  <%= f.label :notes, 'Notes' %>
+  <%= f.text_area :notes %>
+
+  <div class="actions">
+    <%= f.submit "Add Participant" %>
+  </div>
+<% end %>

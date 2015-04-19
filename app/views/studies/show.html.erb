@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'Invite Participants', studies_path %>
+<h1>Management Dashboard for <%= @study.title %></h1>
+<p><%= link_to 'Edit This Study', edit_study_path(@study) %></p>
 
-<%= link_to 'Edit', edit_study_path(@study) %> |
-<%= link_to 'Back', studies_path %>
+<%= link_to 'View Participants', study_participants_path(@study) %>
+<%= link_to 'Invite Participants', new_study_participant_path(@study) %>

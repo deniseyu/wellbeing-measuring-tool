@@ -1,4 +1,4 @@
-<h1>Listing studies</h1>
+<h1>My studies</h1>
 
 <table>
   <thead>
@@ -10,7 +10,7 @@
   <tbody>
     <% @studies.each do |study| %>
       <tr>
-        <td><%= link_to study.title, study_path(study) %></td>
+        <td><h1><%= link_to study.title, study_path(study) %></h1></td>
         <td><%= link_to 'Edit', edit_study_path(study) %></td>
         <td><%= link_to 'Destroy', study_path(study), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
