@@ -4,6 +4,6 @@
   <h2>No data collection events have been sent out yet.</h2>
 <% else %>
   <% @study.records.each do |record| %>
-    <li>Time Sent: <%= record.created_at %></li>
+    <li><%= link_to record.created_at, study_record_path(@study, record) %></li>
   <% end %>
 <% end %>

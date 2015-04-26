@@ -1,0 +1,15 @@
+<%= form_for [@record, @response] do |f| %>
+
+  <%= f.label :who, 'Who are you with?' %>
+  <%= f.text_field :who %>
+  <%= f.label :what, 'What are you currently doing?' %>
+  <%= f.text_field :what %>
+  <%= f.label :pleasure, 'Rate your sense of pleasure.' %>
+  <%= f.text_field :pleasure %>
+  <%= f.label :purpose, 'Rate your sense of purpose.' %>
+  <%= f.text_field :purpose %>
+
+  <div class="actions">
+    <%= f.submit "Save" %>
+  </div>
+<% end %>

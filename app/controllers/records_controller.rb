@@ -27,6 +27,8 @@ class RecordsController < ApplicationController
   end
 
   def show
+    @record = Record.find(params[:id])
+    @responses = @record.responses
   end
 
   protected

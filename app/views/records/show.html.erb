@@ -1,0 +1,26 @@
+<h1>Received Responses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <td>Time</td>
+      <td>Participant ID</td>
+      <td>Who?</td>
+      <td>What?</td>
+      <td>Pleasure</td>
+      <td>Purpose</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @responses.each do |response| %>
+    <tr>
+      <td><%= response.created_at %></td>
+      <td><%= response.participant_id %></td>
+      <td><%= response.who %></td>
+      <td><%= response.what %></td>
+      <td><%= response.pleasure %></td>
+      <td><%= response.purpose %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
