@@ -5,7 +5,8 @@
 <% else %>
   <ol>
     <% @study.participants.each do |participant| %>
-    <li><%= participant.first_name %> <%= participant.last_name %>, <%= participant.email %></li>
+    <li><%= participant.first_name %> <%= participant.last_name %>, <%= participant.email %>
+      <%= link_to 'Remove', study_participant_path(@study, participant), method: :delete %></li>
     <% end %>
   </ol>
 <% end %>
