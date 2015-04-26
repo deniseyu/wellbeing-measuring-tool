@@ -1,23 +1,20 @@
-<h1>My studies</h1>
+<h1>Studies Dashboard</h1>
+<p>Manage your existing studies.</p>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @studies.each do |study| %>
-      <tr>
-        <td><h1><%= link_to study.title, study_path(study) %></h1></td>
-        <td><%= link_to 'Edit', edit_study_path(study) %></td>
-        <td><%= link_to 'Destroy', study_path(study), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<% if current_user %><%= link_to 'New Study', new_study_path %><% end %>
+<div class='container-fluid studies-container'>
+  <div class='row'>
+    <div class='col-2 studies-col'>
+      <h3>Current Studies</h3>
+      <% if @studies.any? %>
+      <ol>
+        <% @studies.each do |study| %>
+        <li><%= link_to study.title, study_path(study) %></li>
+        <% end %>
+      </ol>
+      <% else %>
+        <p>You have not created any studies yet!</p>
+      <% end %>
+    </div>
+    <div class='col-2 studies-col'><h3><%= link_to 'Create New Study', new_study_path %></h3></div>
+  </div>
+</div>

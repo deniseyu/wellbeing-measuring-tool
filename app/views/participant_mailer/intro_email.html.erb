@@ -4,7 +4,8 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Welcome to Wellbeing Survey, <%= @participant.first_name %></h1>
+    <p>Dear <%= @participant.first_name %>,</p>
+    <p>You have been invited to participate in the following study: <%= @study.title %></p>
     <p>You will be receiving periodic communications via email and/or mobile phone.</p>
     <p>When you receive a prompt to record your mental state, please follow the instructions.</p>
     <p>Your responses are always anonymized.</p>

@@ -12,11 +12,12 @@
       <%= render 'layouts/header' %>
   <% end %>
 
+
+  <main>
   <% if notice %>
     <p id='notice'><%= notice %></p>
   <% end %>
-
-  <main>
+  
     <%= yield %>
   </main>
 

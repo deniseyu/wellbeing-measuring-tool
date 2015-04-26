@@ -10,6 +10,6 @@
     <p>A note from the study administrator: <%= @record.notes %></p>
     <% end %>
 
-    <p>Please follow this link: <%= link_to 'Enter Response', new_record_response_path(@record) %> </p>
+    <p>Please follow this link: <%= link_to 'Enter Response', new_record_participant_response_path(@record, @participant) %> </p>
   </body>
 </html>

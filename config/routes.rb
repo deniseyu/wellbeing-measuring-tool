@@ -4,11 +4,14 @@ Rails.application.routes.draw do
   resources :studies do
     resources :records do
     end
-    resources :participants
+    resources :participants do
+    end
   end
 
   resources :records do
-    resources :responses
+    resources :participants do
+      resources :responses, shallow: true
+    end
   end
 
   root 'static#welcome'
