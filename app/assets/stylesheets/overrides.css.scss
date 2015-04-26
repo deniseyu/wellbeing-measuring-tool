@@ -53,3 +53,24 @@ ol {
     padding: 10px;
   }
 }
+
+table {
+  thead {
+    background-color: rgba(86,61,124,.8);
+    color: #FFF;
+    tr {
+      td { padding: 5px 10px 5px 10px;}
+    }
+  }
+  tbody {
+    &:nth-child(odd) {
+      background-color: rgba(86,61,124,.15);
+    }
+    &:nth-child(even) {
+      background-color: rgba(86,61,124,.3);
+    }
+    tr {
+      td { padding: 5px 10px 5px 10px;}
+    }
+  }
+}

@@ -1,4 +1,4 @@
-<%= link_to '<< Back', :back %>
+<%= link_to '<< Back', study_path(@study) %>
 <h1>Collected Records for <%= @study.title %></h1>
 
 <% if @study.records.empty? %>

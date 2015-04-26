@@ -1,20 +1,24 @@
+<%= link_to '<< Back', :back %>
+
 <h1>Received Responses</h1>
 
 <table>
   <thead>
     <tr>
       <td>Time</td>
+      <td>Date</td>
       <td>Participant ID</td>
-      <td>Who?</td>
-      <td>What?</td>
-      <td>Pleasure</td>
-      <td>Purpose</td>
+      <td>With whom?</td>
+      <td>Doing what?</td>
+      <td>Pleasure Rating</td>
+      <td>Purpose Rating</td>
     </tr>
   </thead>
   <tbody>
     <% @responses.each do |response| %>
     <tr>
-      <td><%= response.created_at %></td>
+      <td><%= response.created_at.strftime("%m:%M %p") %></td>
+      <td><%= response.created_at.strftime("%e %b %Y") %></td>
       <td><%= response.participant_id %></td>
       <td><%= response.who %></td>
       <td><%= response.what %></td>
