@@ -4,4 +4,7 @@ class StaticController < ApplicationController
       redirect_to studies_path
     end
   end
+
+  def success
+  end
 end

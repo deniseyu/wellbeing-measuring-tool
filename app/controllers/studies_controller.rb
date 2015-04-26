@@ -2,9 +2,6 @@ class StudiesController < ApplicationController
   before_action :set_study, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: :index
 
-  def welcome
-  end
-
   def index
     @studies = Study.owned_by(current_user)
   end

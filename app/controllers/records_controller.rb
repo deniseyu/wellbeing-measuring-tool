@@ -3,6 +3,10 @@ class RecordsController < ApplicationController
   before_action :authenticate_user!
 
   def index
+    respond_to do |format|
+      format.html
+      format.csv { send_data @study.to_csv }
+    end
   end
 
   def new

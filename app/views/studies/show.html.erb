@@ -2,9 +2,10 @@
 
 <h1>Management Dashboard for <%= @study.title %></h1>
 <p><%= link_to 'Edit This Study', edit_study_path(@study) %></p>
-
+<hr>
 <li><%= link_to 'View Participants', study_participants_path(@study) %></li>
 <li><%= link_to 'Invite Participants', new_study_participant_path(@study) %></li>
 <hr>
 <li><%= link_to 'View Records', study_records_path(@study) %></li>
+<li><%= link_to 'Export CSV', study_records_path(@study, format: 'csv') %></li>
 <li><%= link_to 'Create New Data Collection Event', new_study_record_path(@study) %></li>
