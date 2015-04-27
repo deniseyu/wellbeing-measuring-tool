@@ -42,6 +42,7 @@ gem 'valid_email'
 gem 'rails_12factor', group: :production
 gem 'devise'
 gem 'bootstrap-sass'
+gem 'figaro'
 
 group :test, :development do
   gem 'letter_opener'
