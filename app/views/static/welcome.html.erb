@@ -1,2 +1,49 @@
 <%= link_to 'Register', new_user_registration_path, method: :get, class: 'btn' %>
 <%= link_to 'Log In', new_user_session_path, method: :get, class: 'btn' %>
+
+<!-- EMBEDDED GOOGLE FORM -->
+<form action="https://docs.google.com/forms/d/1DrxAlxDSN6-0yOSmSQLp1MYGzNE2J5Ub3tFNMZAMqLU/formResponse" method="POST" id="ss-form" target="_self" onsubmit="">
+  <ol role="list" class="ss-question-list" style="padding-left: 0">
+    <div class="ss-form-question errorbox-good" role="listitem">
+      <div dir="ltr" class="ss-item ss-item-required ss-text">
+        <div class="ss-form-entry">
+          <label class="ss-q-item-label" for="entry_123830339">
+            <div class="ss-q-title">Name
+              <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+            </div>
+            <div class="ss-q-help ss-secondary-text" dir="ltr"></div>
+          </label>
+          <input type="text" name="entry.123830339" value="" class="ss-q-short" id="entry_123830339" dir="auto" aria-label="Name  " aria-required="true" required="" title="">
+          <div class="error-message" id="276160801_errorMessage"></div>
+        </div>
+      </div>
+    </div>
+    <div class="ss-form-question errorbox-good" role="listitem">
+      <div dir="ltr" class="ss-item ss-item-required ss-text">
+        <div class="ss-form-entry">
+          <label class="ss-q-item-label" for="entry_2029205802">
+            <div class="ss-q-title">Email
+              <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+            </div>
+            <div class="ss-q-help ss-secondary-text" dir="ltr"></div>
+          </label>
+          <input type="email" name="entry.2029205802" value="" class="ss-q-short" id="entry_2029205802" dir="auto" aria-label="Email  Must be a valid email address" aria-required="true" required="" title="Must be a valid email address">
+        </div>
+      </div>
+    </div>
+    <input type="hidden" name="draftResponse" value="[,,&quot;5364945863176943665&quot;]">
+    <input type="hidden" name="pageHistory" value="0">
+    <input type="hidden" name="fbzx" value="5364945863176943665">
+    <div class="ss-item ss-navigate">
+      <table id="navigation-table">
+        <tbody>
+          <tr>
+            <td class="ss-form-entry goog-inline-block" id="navigation-buttons" dir="ltr">
+              <input type="submit" name="submit" value="Submit" id="ss-submit" class="jfk-button jfk-button-action ">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </ol>
+</form>

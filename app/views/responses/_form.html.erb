@@ -1,9 +1,9 @@
 <%= form_for [@record, @participant, @response] do |f| %>
 
   <%= f.label :who, 'Who are you with?' %>
-  <%= f.text_field :who %>
+  <%= f.select :who, options_for_select(['Boss', 'Colleagues', 'Alone']) %>
   <%= f.label :what, 'What are you currently doing?' %>
-  <%= f.text_field :what %>
+  <%= f.select :what, options_for_select(['Working', 'Taking a break', 'Commuting', 'Meeting', 'Eating', 'Other']) %>
   <%= f.label :pleasure, 'Rate your sense of pleasure.' %>
   <%= f.select :pleasure, options_for_select([*1..10]) %>
   <%= f.label :purpose, 'Rate your sense of purpose.' %>
